@@ -3,23 +3,23 @@ kind: Deployment
 metadata:
   creationTimestamp: null
   labels:
-    app: monitoringapp
-  name: monitoringapp
+    app: flaskdemo
+  name: flaskdemo
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: monitoringapp
+      app: flaskdemo
   strategy: {}
   template:
     metadata:
       creationTimestamp: null
       labels:
-        app: monitoringapp
+        app: flaskdemo
     spec:
       containers:
-      - image: ramtati/monitoringapp
-        name: monitoringapp
+      - image: ramtati/test:6
+        name: flaskdemo
         resources: {}
 status: {}
 ---
@@ -35,4 +35,4 @@ spec:
   - port: 80
     targetPort: 5000
   selector:
-    app: monitoringapp
+    app: flaskdemo
