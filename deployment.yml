@@ -18,7 +18,7 @@ spec:
         app: monitoringapp
     spec:
       containers:
-      - image: ramtati/monitoringapp:latest
+      - image: ramtati/monitoringapp
         name: monitoringapp
         resources: {}
 status: {}
